@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Imóveis | Contratos Durão</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+
+
+
+    <div class="sidebar">
+
+        <h2>Contrato Durão</h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="novo.html">
+                    <i class="fa-solid fa-file-contract"></i>
+                    Novo Contrato
+                </a>
+            </li>
+
+            <li>
+                <a href="locatarios.html">
+                    <i class="fa-solid fa-users"></i>
+                    Locatários
+                </a>
+            </li>
+
+            <li>
+    <a href="imoveis.html">
+        <i class="fa-solid fa-building"></i>
+        Imóveis
+    </a>
+</li>
+
+<li class="active">
+                <a href="historico.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Histórico
+                </a>
+            </li>
+
+            <li>
+                <a href="configuracoes.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Configurações
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <main class="content">
+
+        <div class="page-header">
+
+            <h1>Cadastro de Imóveis</h1>
+
+            <p>Cadastre os apartamentos disponíveis.</p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>Número do Apartamento</label>
+
+                    <input
+                        type="text"
+                        id="numeroApartamento"
+                        placeholder="Ex.: 101">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Características</label>
+
+                    <textarea
+                        id="caracteristicas"
+                        rows="5"
+                        placeholder="Ex.: Apartamento com 2 quartos, sala, cozinha, banheiro e área de serviço."></textarea>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Observações (Opcional)</label>
+
+                    <textarea
+                        id="observacoes"
+                        rows="3"
+                        placeholder="Ex.: Próximo à escada."></textarea>
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <button class="btn-primary" onclick="salvarImovel()">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Salvar Imóvel
+
+            </button>
+
+        </div>
+
+        <br>
+
+       
+
+        <div class="card">
+
+            <h2>Imóveis Cadastrados</h2>
+
+            <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Apartamento</th>
+
+                        <th>Características</th>
+
+                        <th>Observações</th>
+
+                        <th width="120">Ações</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tabelaImoveis">
+
+                    <tr>
+
+                        <td colspan="4" style="text-align:center">
+
+                            Nenhum imóvel cadastrado.
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

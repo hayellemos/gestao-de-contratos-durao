@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato Durãos - Novo Contrato</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+
+
+    <div class="sidebar">
+
+        <h2>Contrato Durão</h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="novo.html">
+                    <i class="fa-solid fa-file-contract"></i>
+                    Novo Contrato
+                </a>
+            </li>
+
+            <li>
+                <a href="locatarios.html">
+                    <i class="fa-solid fa-users"></i>
+                    Locatários
+                </a>
+            </li>
+
+            <li>
+    <a href="imoveis.html">
+        <i class="fa-solid fa-building"></i>
+        Imóveis
+    </a>
+</li>
+
+<li class="active">
+                <a href="historico.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Histórico
+                </a>
+            </li>
+
+            <li>
+                <a href="configuracoes.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Configurações
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+    <div class="content">
+
+        <h1>Novo Contrato</h1>
+
+        <form id="formContrato">
+
+         
+
+            <div class="card">
+
+                <h2>Dados do Locatário</h2>
+
+                <div class="grid">
+
+                    <select id="locatario" onchange="selecionarLocatario()">
+                      <option value="">Selecione um locatário</option>
+                    </select>
+
+                    <input id="estadoCivil" type="text" placeholder="Estado Civil" readonly>
+
+                    <input id="nacionalidade" type="text" placeholder="Nacionalidade" readonly>
+
+                    <input id="profissao" type="text" placeholder="Profissão" readonly>
+
+                    <input id="rg" type="text" placeholder="RG" readonly>
+
+                    <input id="orgao" type="text" placeholder="Órgão Expedidor" readonly>
+
+                    <input id="cpf" type="text" placeholder="CPF" readonly>
+
+                    <input id="cidade" type="text" placeholder="Cidade"readonly>
+
+                </div>
+
+            </div>
+
+        
+
+            <div class="card">
+
+                <h2>Objeto do Contrato</h2>
+
+                <div class="grid">
+
+                    <select id="apartamento" onchange="selecionarImovel()">
+
+                     <option value="">Selecione um apartamento</option>
+
+                    </select>
+
+                    <textarea id="caracteristicas"
+                        placeholder="Características do apartamento" readonly></textarea>
+
+                </div>
+
+            </div>
+
+        
+
+<div class="card">
+
+    <h2>Valor do Aluguel</h2>
+
+    <div class="grid">
+
+        <input
+            id="valorAluguel"
+            type="number"
+            placeholder="Valor do Aluguel">
+
+        <input
+            id="valorExtenso"
+            type="text"
+            placeholder="Valor por extenso">
+
+        <input
+            id="meses"
+            type="number"
+            placeholder="Quantidade de meses">
+
+        <input
+            id="dataInicio"
+            type="date">
+
+    </div>
+
+</div>
+
+
+
+<div class="card">
+
+    <h2>Garantia (Caução)</h2>
+
+    <div class="grid">
+
+        <input
+            id="valorCaucao"
+            type="number"
+            placeholder="Valor da Caução">
+
+        <input
+            id="caucaoExtenso"
+            type="text"
+            placeholder="Valor da Caução por extenso">
+
+    </div>
+
+</div>
+
+
+
+<div class="card">
+
+    <h2>Assinatura</h2>
+
+    <div class="grid">
+
+        <input
+            id="cidadeAssinatura"
+            type="text"
+            placeholder="Cidade da Assinatura">
+
+        <input
+            id="dataAssinatura"
+            type="date">
+
+    </div>
+
+</div>
+
+<button
+    type="button"
+    class="btn-primary"
+    onclick="gerarContrato()">
+
+    <i class="fa-solid fa-file-signature"></i>
+
+    Gerar Contrato
+
+</button>
+
+        </form>
+
+    </div>
+
+   
+
+    <div class="modal" id="modal">
+
+        <div class="modal-box">
+
+            <i class="fa-solid fa-circle-check sucesso"></i>
+
+            <h2>Contrato Gerado!</h2>
+
+            <p>O contrato foi salvo no histórico.</p>
+
+            <button onclick="fechar()">
+                Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <script>
+    carregarSelectLocatarios();
+    carregarSelectImoveis();
+    </script>
+
+</body>
+
+</html>

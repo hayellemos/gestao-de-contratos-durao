@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratos Durão - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+
+
+<div class="sidebar">
+
+        <h2>Contrato Durão</h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="novo.html">
+                    <i class="fa-solid fa-file-contract"></i>
+                    Novo Contrato
+                </a>
+            </li>
+
+            <li>
+                <a href="locatarios.html">
+                    <i class="fa-solid fa-users"></i>
+                    Locatários
+                </a>
+            </li>
+
+            <li>
+    <a href="imoveis.html">
+        <i class="fa-solid fa-building"></i>
+        Imóveis
+    </a>
+</li>
+
+<li class="active">
+                <a href="historico.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Histórico
+                </a>
+            </li>
+
+            <li>
+                <a href="configuracoes.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Configurações
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+
+
+    <div class="overlay" onclick="fecharMenu()"></div>
+
+
+    <div class="content">
+
+        <h1>Dashboard</h1>
+
+        <p class="subtitle">
+            Bem-vindo ao sistema <strong></strong>.
+        </p>
+
+
+
+        <div class="cards">
+
+            <div class="info-card">
+                <i class="fa-solid fa-file-contract"></i>
+
+                <h3>Contratos</h3>
+
+                <span id="totalContratos">0</span>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>Locatários</h3>
+
+                <span id="totalLocatarios">0</span>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h3>Imóveis</h3>
+
+                <span id="totalImoveis">0</span>
+
+            </div>
+
+            <div class="info-card">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h3>Contratos este mês</h3>
+
+                <span id="contratosMes">0</span>
+
+            </div>
+
+        </div>
+
+   
+
+        <div class="card">
+
+            <h2>Ações Rápidas</h2>
+
+            <div class="botoes">
+
+                <a href="novo.html" class="btn">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    Novo Contrato
+                </a>
+
+                <a href="locatarios.html" class="btn">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Novo Locatário
+                </a>
+
+                <a href="historico.html" class="btn">
+                    <i class="fa-solid fa-folder-open"></i>
+                    Histórico
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h2>Últimos Contratos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nº</th>
+                        <th>Locatário</th>
+                        <th>Apartamento</th>
+                        <th>Valor</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="ultimosContratos">
+
+                    <tr>
+
+                        <td colspan="4" style="text-align:center">
+
+                            Nenhum contrato cadastrado.
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
